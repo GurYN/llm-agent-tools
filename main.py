@@ -1,4 +1,4 @@
-import json, ollama, inspect
+import json, ollama
 from typing_extensions import Sequence
 from typing import get_type_hints
 
@@ -46,7 +46,6 @@ def generate_message(question: str) -> Sequence[ollama.Message]:
     ]
 
 questions = [
-    "What can I say to my doudou?",
     "Show me users",
     "Show me comments for the third post.",
     "Get the top 5 posts.",
@@ -76,7 +75,7 @@ for question in questions:
             try:
                 response = call_function_dynamically(funcs, tool_name, **tool_input)
                 tool_results.append({ 'name': tool_name, 'response': response })
-                print(f"Tools {tool['tool']} answer: {response}")
+                print(f"Tool {tool['tool']} answer: {response}")
             except:
                 print(f"Function {tool_name} with parameters {tool_input} not found")
 
