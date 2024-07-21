@@ -75,7 +75,7 @@ for question in questions:
             try:
                 response = call_function_dynamically(funcs, tool_name, **tool_input)
                 tool_results.append({ 'name': tool_name, 'response': response })
-                print(f"Tool {tool['tool']} answer: {response}")
+                # print(f"Tool {tool['tool']} answer: {response}")
             except:
                 print(f"Function {tool_name} with parameters {tool_input} not found")
 
