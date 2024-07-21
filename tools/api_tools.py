@@ -12,6 +12,6 @@ def get_comments(post_id: int) -> list:
     return result.json()
 
 def get_users() -> list:
-    """Get a list of users."""
+    """Get a list of users inluding information like addess, phone number, ..."""
     result = requests.get('https://jsonplaceholder.typicode.com/users')
     return result.json()

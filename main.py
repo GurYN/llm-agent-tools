@@ -47,6 +47,7 @@ def generate_message(question: str) -> Sequence[ollama.Message]:
 
 questions = [
     "Show me users",
+    "Give me the phone number of the user called Patricia Lebsack",
     "Show me comments for the third post.",
     "Get the top 5 posts.",
     "Remind me to take a coffee",
